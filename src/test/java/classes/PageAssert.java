@@ -17,5 +17,4 @@ public class PageAssert {
     public String getAssertString() {
         return this.assertString;
     }
-
 }

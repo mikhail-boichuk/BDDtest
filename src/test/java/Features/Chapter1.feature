@@ -5,5 +5,16 @@ Feature: Chapter1Page
     Given Navigate to home page
     And Click on link Chapter
     Then I should see following text on page Chapter
-      | Text                                 |
+      | assertString                         |
       | Assert that this text is on the page |
+
+  Scenario Outline: Navigate to page Chapter1 using outline
+    Given Navigate to home page
+    And Click on link Chapter
+    Then I should see following text on page Chapter <assertString>
+
+    Examples:
+      | assertString                         |
+      | Assert that this text is on the page |
+      | Another assert                       |
+      | And one more                         |
